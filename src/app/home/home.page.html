@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      List
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,8 +13,13 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <a href="https://github.com/NiklasMerz/scroll-repro">Repo</a>
+
+  <ion-list>
+    <ion-item *ngFor="let value of fields">
+      {{value}}
+    </ion-item>
+
+    <ion-button (click)="refresh()">Refresh</ion-button>
+  </ion-list>
 </ion-content>
